@@ -14,6 +14,7 @@ class Blockchain(object):
         """
         Creates a new block in the chain
         :param proof: <int> The proof given by the proof of work alogrithm
+        :param previous_hash: (Optional) <str> has of previous block
         :return: <dict> New Block
         """
 
