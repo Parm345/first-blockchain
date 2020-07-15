@@ -66,7 +66,7 @@ class Blockchain(object):
         """
 
         # We must make sure that the Dictioanry is Ordered, or we'll have incosisten hashes
-        block_string = json.dumps(block, sort_keys=True).encode
+        block_string = json.dumps(block, sort_keys=True).encode()
         return hashlib.sha256(block_string).hexdigest()
 
     def proof_of_work(self, last_proof):
@@ -88,7 +88,7 @@ class Blockchain(object):
     @staticmethod
     def valid_proof(last_proof, proof):
         """
-        Validates the Proof: Does has(last_proof, proof) contain 4 leading zeroes
+        Validates the Proof: Does hash(last_proof, proof) contain 4 leading zeroes
         :param last_proof: <int> Current Proof
         :return: <bool> True if correct, False if not
         """
